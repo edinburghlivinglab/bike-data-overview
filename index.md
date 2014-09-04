@@ -13,3 +13,10 @@
 * [CEVC live travel/roads data visualisations] (http://edinburgh.cdmf.info/public/map/map.htm)
 * [Scottish air quality live monitors] (http://www.scottishairquality.co.uk/)
 * [Firrhill High School Travel Plan 2013] (http://www.firrhillhighschool.org.uk/parents/working-groups/environment-group/)
+
+## other useful things
+
+* http://publiclab.org/
+* http://www.openlivinglabs.eu/
+* http://cusp.nyu.edu/
+* [Microsoft Tenison Road project] (http://tenisonroad.com/)
