@@ -13,6 +13,8 @@
 * [CEVC live travel/roads data visualisations] (http://edinburgh.cdmf.info/public/map/map.htm)
 * [Scottish air quality live monitors] (http://www.scottishairquality.co.uk/)
 * [Firrhill High School Travel Plan 2013] (http://www.firrhillhighschool.org.uk/parents/working-groups/environment-group/)
+* [Sustans Scotland] (http://www.sustrans.org.uk/scotland)
+* [Cycling Action Plan for Scotland] (http://www.scotland.gov.uk/Publications/2010/06/25103912/0)
 
 ## other useful things
 
