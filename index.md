@@ -16,7 +16,13 @@
 
 ## other useful things
 
-* http://publiclab.org/
+* [Public Lab, USA] (http://publiclab.org/)
 * http://www.openlivinglabs.eu/
 * http://cusp.nyu.edu/
 * [Microsoft Tenison Road project] (http://tenisonroad.com/)
+* [CycleStreets open-data blog] (http://www.cyclestreets.net/blog/category/open-data/)
+* [England cycling data project] (http://wiki.openstreetmap.org/wiki/England_Cycling_Data_project)
+* [Cycle Atlanta project] (http://cycleatlanta.org/)
+* Councilmatic Philidelphia http://www.councilmatic.org/
+* [London School transport plan] (https://www.tfl.gov.uk/cdn/static/cms/documents/delivery-plan-schools-young-people-2014.pdf)
+* [New York safe routes to school programme] (https://www.dot.ny.gov/safe-routes-to-school)  [Evaluation study] (http://pediatrics.aappublications.org/content/131/2/290.full.pdf)
