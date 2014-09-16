@@ -13,15 +13,16 @@
 * [CEVC live travel/roads data visualisations](http://edinburgh.cdmf.info/public/map/map.htm)
 * [Scottish air quality live monitors](http://www.scottishairquality.co.uk/)
 * [Firrhill High School Travel Plan 2013](http://www.firrhillhighschool.org.uk/parents/working-groups/environment-group/)
-* [Sustans Scotland](http://www.sustrans.org.uk/scotland)
+* [Sustrans Scotland](http://www.sustrans.org.uk/scotland)
 * [Cycling Action Plan for Scotland](http://www.scotland.gov.uk/Publications/2010/06/25103912/0)
+* [City of Edinburgh Council Open Data Portal](http://www.edinburghopendata.info/dataset)
 
 ## Other useful things
 
 * [Public Lab, USA](http://publiclab.org/)
 * [Cyclehack](http://www.cyclehack.com)
 * [Open Living Labs](http://www.openlivinglabs.eu/)
-* [Center for Urban Science & Progress](http://cusp.nyu.edu/)
+* [CUSP: Center for Urban Science & Progress](http://cusp.nyu.edu/)
 * [Microsoft Tenison Road project](http://tenisonroad.com/)
 * [CycleStreets open-data blog](http://www.cyclestreets.net/blog/category/open-data/)
 * [England cycling data project](http://wiki.openstreetmap.org/wiki/England_Cycling_Data_project)
