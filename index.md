@@ -31,7 +31,7 @@
 * [London School transport plan](https://www.tfl.gov.uk/cdn/static/cms/documents/delivery-plan-schools-young-people-2014.pdf)
 * [Cycling Embassy Denmark](http://www.cycling-embassy.dk/)
 * [A Walking and Cycling Action Plan for Wales 2009 - 2013](http://www.physicalactivityandnutritionwales.org.uk/Documents/740/Walking%20and%20Cycling%20Action%20Plan.pdf)
-* [Analysis and synthesis of evidence on the effects  of investment in six Cycling Demonstration Towns November 2009, Dept of Transport (England)](http://www.transportforqualityoflife.com/u/files/Analysis%20and%20Synthesis%20Nov%202009.pdf)
+* [Analysis and synthesis of evidence on the effects of investment in six Cycling Demonstration Towns November 2009, Dept of Transport (England)](http://www.transportforqualityoflife.com/u/files/Analysis%20and%20Synthesis%20Nov%202009.pdf)
 * [Copenhagenize](http://www.copenhagenize.com/)
 * [Lin Yang et al Interventions to promote cycling: systematic review, BMJ 2010;341:c5293](http://www.bmj.com/content/bmj/341/bmj.c5293.full.pdf)
 * [Heelan et al 2009 Evaluation of a Walking School Bus for Promoting Physical Activity in Youth, Journal of Physical Activity and Health, 2009, 6, 560-567](http://www.humankinetics.com/acucustom/sitename/Documents/DocumentItem/17390.pdf)
