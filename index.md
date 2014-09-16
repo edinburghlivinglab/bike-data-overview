@@ -10,7 +10,8 @@ This is a collection of links to information that might be useful for the Design
 * [OpenStreetMap Cycle map](http://www.opencyclemap.org)
 
 ## The wider context in Edinburgh
-
+* [Map of Inverleith (jpg)](http://www.edinburghnp.org.uk/media/87724/InverleithMap_7_Page_1.jpg)
+* [Inverleith Neighbourhood Partnership](http://www.edinburghnp.org.uk/neighbourhood-partnerships/inverleith/)
 * [20 mph limit Consultation](http://www.edinburgh.gov.uk/info/20089/roads_and_pavements/1024/20mph_consultation)
 * [CEVC live travel/roads data visualisations](http://edinburgh.cdmf.info/public/map/map.htm)
 * [Scottish air quality live monitors](http://www.scottishairquality.co.uk/)
