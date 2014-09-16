@@ -1,5 +1,7 @@
 # Edinburgh Living Lab: Cyclehack 2014
 
+This is a collection of links to information that might be useful for the Design Informatics course. We will probably add new links during the course, and are happy to take suggestions for anything that you think would be useful to add.
+
 ## General resources about cycling in Edinburgh
 
 * [Edinburgh Cyclestreets Journey Planner](http://edinburgh.cyclestreets.net)
