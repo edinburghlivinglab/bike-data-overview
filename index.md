@@ -43,6 +43,7 @@ This is a collection of links to information that might be useful for the Design
 * [Cyclealert system](http://www.cyclealert.com/)
 * [Adaptive Streets](http://gehlarchitects.com/blog/adaptive-streets/)
 * [MIT big data challenge - transportation Boston](https://www.csail.mit.edu/node/2124)
+* [Cycle share apps and crowdsourced data collection] (http://bikeshare.com/2013/11/where-is-bike-shares-killer-app/)
 
 ##New York Example
 * [New York safe routes to school programme](https://www.dot.ny.gov/safe-routes-to-school)  [Evaluation study](http://pediatrics.aappublications.org/content/131/2/290.full.pdf)
