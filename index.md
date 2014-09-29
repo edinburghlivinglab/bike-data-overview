@@ -8,6 +8,8 @@ This is a collection of links to information that might be useful for the Design
 * [Edinburgh Innertube map of cycle paths](http://innertubemap.com)
 * [Spokes list of Edinburgh Cycling organisations](http://www.spokes.org.uk/wordpress/links/edinburgh-cycling-info-organisations/)
 * [OpenStreetMap Cycle map](http://www.opencyclemap.org)
+* [City of Edinburgh Council: Cycling and Walking](http://www.edinburgh.gov.uk/info/20087/cycling_and_walking)
+* [City of Edinburgh Council: Transport Data on GitHub](https://github.com/edinburghcouncil/datasets-transport)
 
 ## The wider context in Edinburgh
 * [Map of Inverleith (jpg)](http://www.edinburghnp.org.uk/media/87724/InverleithMap_7_Page_1.jpg)
