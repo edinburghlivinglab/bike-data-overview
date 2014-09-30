@@ -1,5 +1,9 @@
 #Design for Informatics, 2014-15
 
+##Week 3 Slides
+
+* [Design with Data](design_with_data_week3.pdf)
+
 ##Week 3 Resources
 
 * [CEPATS Traffic Survey](https://github.com/edinburghlivinglab/cyclehack/tree/master/CEPATS)
