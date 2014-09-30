@@ -2,7 +2,7 @@
 
 ##Week 3 Slides
 
-* [Design with Data](design_with_data_week3.pdf)
+* [Designing with Data](design_with_data_week3.pdf)
 
 ##Week 3 Resources
 
