@@ -6,6 +6,7 @@ This is a collection of links to information that might be useful for the Design
 
 * [Edinburgh Cyclestreets Journey Planner](http://edinburgh.cyclestreets.net)
 * [Edinburgh Innertube map of cycle paths](http://innertubemap.com)
+* [Edinburgh Bike Station](http://www.thebikestation.org.uk/edinburgh/)
 * [Spokes list of Edinburgh Cycling organisations](http://www.spokes.org.uk/wordpress/links/edinburgh-cycling-info-organisations/)
 * [OpenStreetMap Cycle map](http://www.opencyclemap.org)
 * [City of Edinburgh Council: Cycling and Walking](http://www.edinburgh.gov.uk/info/20087/cycling_and_walking)
