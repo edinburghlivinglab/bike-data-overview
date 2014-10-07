@@ -18,6 +18,18 @@ Data stores to use:
 * City of Edinburgh Council (CEC) [Open Data Store](http://www.edinburghopendata.info/dataset)
 * CEC [GitHub repository](https://github.com/edinburghcouncil/datasets)
 
+And
+
+* [Scottish Neighbourhood Statistics](http://www.sns.gov.uk/default.aspx)
+
+### Tasks
+
+Try to use data from the CEC data sets to answer the following questions **about Inverleith**:
+
+1. How many allotments are there?
+2. How many leisure centres are there?
+3. How many museums and art galleries?
+4. How many public bike parking facilities?
 
 
 
