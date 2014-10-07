@@ -34,7 +34,7 @@ Try to use data from the **CEC data sets** to answer the following questions **a
 
 You may be able to do this by identifying relevant data sets in the CEC data stores and just looking at the data.
 
-You may find that some of the data is geocoded using WGS84 latitude and longitude coordinates; e.g., `55.954419, -3.1735552`. If you just paste these coordinates into a Google search bar, it will return a little map of the location.
+You may find that some of the data is geocoded using [WGS84 latitude and longitude](http://en.wikipedia.org/wiki/World_Geodetic_System) coordinates; e.g., `55.954419, -3.1735552`. If you just paste these coordinates into a Google search bar, it will return a little map of the location.
 
 
 
@@ -65,29 +65,42 @@ You may find that some of the data is geocoded using WGS84 latitude and longitud
 
 #### Converting OS Grid Ref to LatLong
 
-We want to just keep information to the left of the ` / ` in column B and just information to the right of the ` / ` in column C.
+We want to just keep information to the left of the ` / ` in column B and just information to the right of the ` / ` in column C. 
 
-We'll use `Edit > Find and replace` on each column separately, and we'll use regular expressions.
+Your goal is to end up with a sheet that looks like this:
+
+![Locations XY](images/survey_xy.png =500x)
+
+This will allow us to input our Grid Reference XY data into an application that convers the geocoordinates to WGS84 coordinates, which are more widely supported by by mapping coordinates.
+
+We'll use `Edit > Find and replace` on each column separately, and we'll use regular expressions. These are the settings you should use in Google Sheets:
 
 ###### Column A
 
 **Find**: ` / [0-9]+`
 
-**Replace**: `  ` 
+**Replace**: [leave blank]
 
-Search using regular expressions
+Check the option: `Search using regular expressions`
 
-Specific range: `'Survey Information'!B:B
+Select `Specific range` and give it the value `'Survey Information'!B:B`
+
+---
+*NB The **replace** string should be empty. Also note that we are deliberately getting rid of the space following the `/` character. Similarly for the following replacement.*
+
+---
 
 ###### Column B
 
 **Find**: `[0-9]+ / `
 
-**Replace**: `  ` 
+**Replace**: [leave blank]
 
-Search using regular expressions
+Check the option: `Search using regular expressions`
 
-Specific range: `'Survey Information'!C:C
+Select `Specific range` and give it the value `'Survey Information'!C:C`
+
+
 
 #### Looking up LatLong
 
@@ -99,9 +112,22 @@ Paste the results back into a new sheet.
 
 Next, you are are going to add the new data you've just created into `IN0730`. You want to add this new data as extra columns. The locations in `IN0730` should align with the street locations that you have just pasted in.
 
-It should look something like this (ignore the 'Start' column): ![](images/latlong1.png =600x). You can now go ahead and delete the column with locations that pasted in, leaving just the new geo-coordinates. Give labels to these two new columns: `Latitude` and `Longitude`.
+It should look something like this: 
 
-## Visualising
+![](images/15mins_geocoded.tiff =500x) 
+
+You can now go ahead and delete the column with locations that pasted in, leaving just the new geo-coordinates. Give labels to these two new columns: `Latitude` and `Longitude`. Congratulations if you've reached this point successfully!
+
+
+
+## Putting the data on a map
+
+In this section of the exercise, you are going to take a few more steps that will allow you to do a simple visualisation of the data on a map. 
+
+### Reorganising the data
+
+We want to change the spreadsheet so tha
+
 
 Select column D 1:38
 
