@@ -181,7 +181,7 @@ sup {
 </ul>
 
 
-<p>And</p>
+<p>And possibly</p>
 
 <ul>
 <li><a href="http://www.sns.gov.uk/default.aspx">Scottish Neighbourhood Statistics</a></li>
@@ -190,13 +190,14 @@ sup {
 
 <h3>Tasks</h3>
 
-<p>Try to use data from the <strong>CEC data sets</strong> to answer the following questions <strong>about Inverleith</strong>:</p>
+<p>Try to use data from the <strong>CEC data sets</strong> to answer the following questions <strong>about Inverleith</strong>.</p>
 
 <ol>
 <li>How many allotments are there?</li>
 <li>How many leisure centres are there?</li>
 <li>How many museums and art galleries?</li>
 <li>How many public bike parking facilities?</li>
+<li>Find out something interesting about Inverleith not already on this list.</li>
 </ol>
 
 
@@ -206,35 +207,49 @@ sup {
 
 <h2>Organising Tabular Data</h2>
 
+<h3>First steps</h3>
+
 <ol>
-<li>Download CE</li>
+<li>Download the <code>Cepats 2013.xls</code> file from <a href="https://github.com/edinburghlivinglab/cyclehack/tree/master/CEPATS">CEPATS data</a></li>
+<li>Import the file into Google Sheets (or use Libre Office or Excel). Create a new spreadsheet, then do <code>File &gt; Import &gt; Replace spreadsheet</code>.</li>
+<li>Make a copy of the file and rename it, just in case you want to rewind to the original version at some point.</li>
+<li>We are going to work with only two sheets: <code>IN0730</code> and <code>Survey Information</code>. Let's start with <code>IN0730</code></li>
 </ol>
 
 
-<pre><code>cat IN0730.csv IN0745.csv &gt; 30mins.csv
-</code></pre>
+<h3>Working on <code>IN0730</code></h3>
 
-<p>Delete rows 1-4</p>
+<ol>
+<li>First, get clear all formatting.</li>
+<li>Next, get rid of all rows except the header rows (i.e., containing the column labels) and the ones starting with 'Abbeyhill' and ending with 'Wester Coates Walkway'.</li>
+<li>Get rid of all the columns except:
 
-<p>Delete columns L-BJ</p>
+<ol>
+<li>the one with street names</li>
+<li>the one headed 'PEDAL CYCLES'</li>
+<li>the one headed 'CARS &amp; TAXIS'</li>
+</ol>
+</li>
+<li>There are currently two header rows; collapse these into one</li>
+</ol>
 
-<p>Delete rows 43-90</p>
 
-<p>Delete rows 85-120</p>
+<h3>Working on <code>Survey Information</code></h3>
 
-<p>Delete all columns apart from pedal cycles and cars</p>
+<ol>
+<li>Delete all rows apart from the ones with street locations; i.e. 5-43.</li>
+<li>Delete all columns apart from the street location one and the one labeled 'O.S. GRID REF.'</li>
+<li>Duplicate the 'O.S. GRID REF.' column; e.g. create new column C and copy all of column B to C.</li>
+</ol>
 
-<p>2013-12-1 7:30:00</p>
 
-<p>Connect apps to Drive
-Fusion Tables</p>
+<h4>Converting OS Grid Ref to LatLong</h4>
 
-<p>Survey information sheet
-Duplicate
-Delete rows 1-4, 40-62, blank rows
-Delete columns A-B, C-H</p>
+<p>We want to just keep information to the left of the <code>/</code> in column B and just information to the right of the <code>/</code> in column C.</p>
 
-<p>Create new column C and copy all of column B to C</p>
+<p>We'll use <code>Edit &gt; Find and replace</code> on each column separately, and we'll use regular expressions.</p>
+
+<h6>Column A</h6>
 
 <p><strong>Find</strong>: <code>/ [0-9]+</code></p>
 
@@ -244,6 +259,8 @@ Delete columns A-B, C-H</p>
 
 <p>Specific range: `'Survey Information'!B:B</p>
 
+<h6>Column B</h6>
+
 <p><strong>Find</strong>: <code>[0-9]+ /</code></p>
 
 <p><strong>Replace</strong>: <code></code></p>
@@ -252,7 +269,17 @@ Delete columns A-B, C-H</p>
 
 <p>Specific range: `'Survey Information'!C:C</p>
 
-<p>http://www.gridreferencefinder.com/batchConvert/batchConvert.php</p>
+<h4>Looking up LatLong</h4>
+
+<p>We are now going to use the <a href="http://www.gridreferencefinder.com/batchConvert/batchConvert.php">GridReferenceFinder</a>. This requires that you paste your tabular data into a box and tick some options. It should look like this:</p>
+
+<p><img src="images/batchConvert.png" width="500" alt="GridReferenceFinder" /></p>
+
+<p>Paste the results back into a new sheet.</p>
+
+<p>Next, you are are going to add the new data you've just created into <code>IN0730</code>. You want to add this new data as extra columns. The locations in <code>IN0730</code> should align with the street locations that you have just pasted in.</p>
+
+<p>It should look something like this (ignore the 'Start' column): <img src="images/latlong1.png" width="600" alt="" />. You can now go ahead and delete the column with locations that pasted in, leaving just the new geo-coordinates. Give labels to these two new columns: <code>Latitude</code> and <code>Longitude</code>.</p>
 
 <h2>Visualising</h2>
 

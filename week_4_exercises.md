@@ -18,18 +18,19 @@ Data stores to use:
 * City of Edinburgh Council (CEC) [Open Data Store](http://www.edinburghopendata.info/dataset)
 * CEC [GitHub repository](https://github.com/edinburghcouncil/datasets)
 
-And
+And possibly
 
 * [Scottish Neighbourhood Statistics](http://www.sns.gov.uk/default.aspx)
 
 ### Tasks
 
-Try to use data from the **CEC data sets** to answer the following questions **about Inverleith**:
+Try to use data from the **CEC data sets** to answer the following questions **about Inverleith**. 
 
 1. How many allotments are there?
 2. How many leisure centres are there?
 3. How many museums and art galleries?
 4. How many public bike parking facilities?
+5. Find out something interesting about Inverleith not already on this list.
 
 You may be able to do this by identifying relevant data sets in the CEC data stores and just looking at the data.
 
@@ -37,37 +38,38 @@ You may find that some of the data is geocoded using WGS84 latitude and longitud
 
 
 
-
-
 ## Organising Tabular Data
 
-1. Download CE
+### First steps
 
-```
-cat IN0730.csv IN0745.csv > 30mins.csv
-```
+1. Download the `Cepats 2013.xls` file from [CEPATS data](https://github.com/edinburghlivinglab/cyclehack/tree/master/CEPATS)
+2. Import the file into Google Sheets (or use Libre Office or Excel). Create a new spreadsheet, then do `File > Import > Replace spreadsheet`.
+3. Make a copy of the file and rename it, just in case you want to rewind to the original version at some point.
+3. We are going to work with only two sheets: `IN0730` and `Survey Information`. Let's start with `IN0730`
 
-Delete rows 1-4
+### Working on `IN0730`
 
-Delete columns L-BJ
+1. First, get clear all formatting.
+2. Next, get rid of all rows except the header rows (i.e., containing the column labels) and the ones starting with 'Abbeyhill' and ending with 'Wester Coates Walkway'.
+3. Get rid of all the columns except:
+	4. the one with street names
+	1. the one headed 'PEDAL CYCLES' 
+	1. the one headed 'CARS & TAXIS'
+4. There are currently two header rows; collapse these into one
 
-Delete rows 43-90
+### Working on `Survey Information`
 
-Delete rows 85-120
+1. Delete all rows apart from the ones with street locations; i.e. 5-43.
+2. Delete all columns apart from the street location one and the one labeled 'O.S. GRID REF.'
+3. Duplicate the 'O.S. GRID REF.' column; e.g. create new column C and copy all of column B to C.
 
-Delete all columns apart from pedal cycles and cars
+#### Converting OS Grid Ref to LatLong
 
-2013-12-1 7:30:00
+We want to just keep information to the left of the ` / ` in column B and just information to the right of the ` / ` in column C.
 
-Connect apps to Drive
-Fusion Tables
+We'll use `Edit > Find and replace` on each column separately, and we'll use regular expressions.
 
-Survey information sheet
-Duplicate
-Delete rows 1-4, 40-62, blank rows
-Delete columns A-B, C-H
-
-Create new column C and copy all of column B to C
+###### Column A
 
 **Find**: ` / [0-9]+`
 
@@ -77,6 +79,8 @@ Search using regular expressions
 
 Specific range: `'Survey Information'!B:B
 
+###### Column B
+
 **Find**: `[0-9]+ / `
 
 **Replace**: `  ` 
@@ -85,7 +89,17 @@ Search using regular expressions
 
 Specific range: `'Survey Information'!C:C
 
-http://www.gridreferencefinder.com/batchConvert/batchConvert.php
+#### Looking up LatLong
+
+We are now going to use the [GridReferenceFinder](http://www.gridreferencefinder.com/batchConvert/batchConvert.php). This requires that you paste your tabular data into a box and tick some options. It should look like this:
+
+![GridReferenceFinder](images/batchConvert.png =500x)
+
+Paste the results back into a new sheet.
+
+Next, you are are going to add the new data you've just created into `IN0730`. You want to add this new data as extra columns. The locations in `IN0730` should align with the street locations that you have just pasted in.
+
+It should look something like this (ignore the 'Start' column): ![](images/latlong1.png =600x). You can now go ahead and delete the column with locations that pasted in, leaving just the new geo-coordinates. Give labels to these two new columns: `Latitude` and `Longitude`.
 
 ## Visualising
 
