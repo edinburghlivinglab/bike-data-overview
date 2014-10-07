@@ -203,7 +203,7 @@ sup {
 
 <p>You may be able to do this by identifying relevant data sets in the CEC data stores and just looking at the data.</p>
 
-<p>You may find that some of the data is geocoded using WGS84 latitude and longitude coordinates; e.g., <code>55.954419, -3.1735552</code>. If you just paste these coordinates into a Google search bar, it will return a little map of the location.</p>
+<p>You may find that some of the data is geocoded using <a href="http://en.wikipedia.org/wiki/World_Geodetic_System">WGS84 latitude and longitude</a> coordinates; e.g., <code>55.954419, -3.1735552</code>. If you just paste these coordinates into a Google search bar, it will return a little map of the location.</p>
 
 <h2>Organising Tabular Data</h2>
 
@@ -247,27 +247,39 @@ sup {
 
 <p>We want to just keep information to the left of the <code>/</code> in column B and just information to the right of the <code>/</code> in column C.</p>
 
-<p>We'll use <code>Edit &gt; Find and replace</code> on each column separately, and we'll use regular expressions.</p>
+<p>Your goal is to end up with a sheet that looks like this:</p>
+
+<p><img src="images/survey_xy.png" width="500" alt="Locations XY" /></p>
+
+<p>This will allow us to input our Grid Reference XY data into an application that convers the geocoordinates to WGS84 coordinates, which are more widely supported by by mapping coordinates.</p>
+
+<p>We'll use <code>Edit &gt; Find and replace</code> on each column separately, and we'll use regular expressions. These are the settings you should use in Google Sheets:</p>
 
 <h6>Column A</h6>
 
 <p><strong>Find</strong>: <code>/ [0-9]+</code></p>
 
-<p><strong>Replace</strong>: <code></code></p>
+<p><strong>Replace</strong>: [leave blank]</p>
 
-<p>Search using regular expressions</p>
+<p>Check the option: <code>Search using regular expressions</code></p>
 
-<p>Specific range: `'Survey Information'!B:B</p>
+<p>Select <code>Specific range</code> and give it the value <code>'Survey Information'!B:B</code></p>
+
+<hr />
+
+<p><em>NB The <strong>replace</strong> string should be empty. Also note that we are deliberately getting rid of the space following the <code>/</code> character. Similarly for the following replacement.</em></p>
+
+<hr />
 
 <h6>Column B</h6>
 
 <p><strong>Find</strong>: <code>[0-9]+ /</code></p>
 
-<p><strong>Replace</strong>: <code></code></p>
+<p><strong>Replace</strong>: [leave blank]</p>
 
-<p>Search using regular expressions</p>
+<p>Check the option: <code>Search using regular expressions</code></p>
 
-<p>Specific range: `'Survey Information'!C:C</p>
+<p>Select <code>Specific range</code> and give it the value <code>'Survey Information'!C:C</code></p>
 
 <h4>Looking up LatLong</h4>
 
@@ -279,9 +291,25 @@ sup {
 
 <p>Next, you are are going to add the new data you've just created into <code>IN0730</code>. You want to add this new data as extra columns. The locations in <code>IN0730</code> should align with the street locations that you have just pasted in.</p>
 
-<p>It should look something like this (ignore the 'Start' column): <img src="images/latlong1.png" width="600" alt="" />. You can now go ahead and delete the column with locations that pasted in, leaving just the new geo-coordinates. Give labels to these two new columns: <code>Latitude</code> and <code>Longitude</code>.</p>
+<p>It should look something like this:<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
 
-<h2>Visualising</h2>
+<p><img src="images/15mins_geocoded_interim.tiff" width="500" alt="" /></p>
+
+<p>You can now go ahead and delete the column with locations that you pasted in, leaving just the new geo-coordinates. Give labels to these two new columns: <code>Latitude</code> and <code>Longitude</code>, like this:</p>
+
+<p><img src="images/15mins_geocoded.tiff" width="500" alt="" /></p>
+
+<p>Congratulations if you've reached this point successfully!</p>
+
+<h2>Putting the data on a map</h2>
+
+<p>In this section of the exercise, you are going to take a few more steps that will allow you to do a simple visualisation of the data on a map.</p>
+
+<h3>Reorganising the data</h3>
+
+<p>We want to change the spreadsheet so that we have a single column for the number of vehicles, and each row has an extra field for the category of vehicle. Here's what a portion of this would look like:</p>
+
+<p><img src="images/categorised2.tiff" width="500" alt="" /></p>
 
 <p>Select column D 1:38</p>
 
@@ -299,5 +327,13 @@ sup {
 
 <p>Filter > Catagory
 choose either <code>cars</code> or <code>pedal cycles</code></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Note that I fixed the misspelling of &lsquo;Inverlieth&rsquo;<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
 </body>
 </html>

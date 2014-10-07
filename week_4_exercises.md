@@ -108,15 +108,23 @@ We are now going to use the [GridReferenceFinder](http://www.gridreferencefinder
 
 ![GridReferenceFinder](images/batchConvert.png =500x)
 
+
 Paste the results back into a new sheet.
 
 Next, you are are going to add the new data you've just created into `IN0730`. You want to add this new data as extra columns. The locations in `IN0730` should align with the street locations that you have just pasted in.
 
-It should look something like this: 
+It should look something like this:[^1]
+
+![](images/15mins_geocoded_interim.tiff =500x)
+
+[^1]: Note that I fixed the misspelling of 'Inverlieth'
+
+
+You can now go ahead and delete the column with locations that you pasted in, leaving just the new geo-coordinates. Give labels to these two new columns: `Latitude` and `Longitude`, like this:
 
 ![](images/15mins_geocoded.tiff =500x) 
 
-You can now go ahead and delete the column with locations that pasted in, leaving just the new geo-coordinates. Give labels to these two new columns: `Latitude` and `Longitude`. Congratulations if you've reached this point successfully!
+Congratulations if you've reached this point successfully!
 
 
 
@@ -126,7 +134,9 @@ In this section of the exercise, you are going to take a few more steps that wil
 
 ### Reorganising the data
 
-We want to change the spreadsheet so tha
+We want to change the spreadsheet so that we have a single column for the number of vehicles, and each row has an extra field for the category of vehicle. Here's what a portion of this would look like:
+
+![](images/categorised2.tiff =500x) 
 
 
 Select column D 1:38
