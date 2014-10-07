@@ -24,12 +24,17 @@ And
 
 ### Tasks
 
-Try to use data from the CEC data sets to answer the following questions **about Inverleith**:
+Try to use data from the **CEC data sets** to answer the following questions **about Inverleith**:
 
 1. How many allotments are there?
 2. How many leisure centres are there?
 3. How many museums and art galleries?
 4. How many public bike parking facilities?
+
+You may be able to do this by identifying relevant data sets in the CEC data stores and just looking at the data.
+
+You may find that some of the data is geocoded using WGS84 latitude and longitude coordinates; e.g., `55.954419, -3.1735552`. If you just paste these coordinates into a Google search bar, it will return a little map of the location.
+
 
 
 

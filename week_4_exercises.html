@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Week 4 Exercises</title>
+
+</head>
+<body>
+<h1>Week 4 Exercises</h1>
+
+<h2>Before you start</h2>
+
+<p>Decide where you are going to store your work, i.e., any data sets that you download and modify, any scripts you might write or use, any other outputs that you create from the data. Options (not mutually exclusive) include:</p>
+
+<ul>
+<li>a standard folder on local storage on your laptop</li>
+<li>in the cloud; e.g. Dropbox or Google Drive folder</li>
+<li>in a versioned repository, such as git + GitHub</li>
+</ul>
+
+
+<p>Name your work folders clearly and create subfolders if necessary. Do you care if you lose the folder?</p>
+
+<h2>Finding Data</h2>
+
+<p>Data stores to use:</p>
+
+<ul>
+<li>City of Edinburgh Council (CEC) <a href="http://www.edinburghopendata.info/dataset">Open Data Store</a></li>
+<li>CEC <a href="https://github.com/edinburghcouncil/datasets">GitHub repository</a></li>
+</ul>
+
+
+<p>And</p>
+
+<ul>
+<li><a href="http://www.sns.gov.uk/default.aspx">Scottish Neighbourhood Statistics</a></li>
+</ul>
+
+
+<h3>Tasks</h3>
+
+<p>Try to use data from the CEC data sets to answer the following questions <strong>about Inverleith</strong>:</p>
+
+<ol>
+<li>How many allotments are there?</li>
+<li>How many leisure centres are there?</li>
+<li>How many museums and art galleries?</li>
+<li>How many public bike parking facilities?</li>
+</ol>
+
+
+<h2>Organising Tabular Data</h2>
+
+<ol>
+<li>Download CE</li>
+</ol>
+
+
+<pre><code>cat IN0730.csv IN0745.csv &gt; 30mins.csv
+</code></pre>
+
+<p>Delete rows 1-4</p>
+
+<p>Delete columns L-BJ</p>
+
+<p>Delete rows 43-90</p>
+
+<p>Delete rows 85-120</p>
+
+<p>Delete all columns apart from pedal cycles and cars</p>
+
+<p>2013-12-1 7:30:00</p>
+
+<p>Connect apps to Drive
+Fusion Tables</p>
+
+<p>Survey information sheet
+Duplicate
+Delete rows 1-4, 40-62, blank rows
+Delete columns A-B, C-H</p>
+
+<p>Create new column C and copy all of column B to C</p>
+
+<p><strong>Find</strong>: <code>/ [0-9]+</code></p>
+
+<p><strong>Replace</strong>: <code></code></p>
+
+<p>Search using regular expressions</p>
+
+<p>Specific range: `'Survey Information'!B:B</p>
+
+<p><strong>Find</strong>: <code>[0-9]+ /</code></p>
+
+<p><strong>Replace</strong>: <code></code></p>
+
+<p>Search using regular expressions</p>
+
+<p>Specific range: `'Survey Information'!C:C</p>
+
+<p>http://www.gridreferencefinder.com/batchConvert/batchConvert.php</p>
+</body>
+</html>
