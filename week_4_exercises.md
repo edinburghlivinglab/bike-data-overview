@@ -87,3 +87,21 @@ Specific range: `'Survey Information'!C:C
 
 http://www.gridreferencefinder.com/batchConvert/batchConvert.php
 
+## Visualising
+
+Select column D 1:38
+
+Data > Sort range from D1 to D38
+
+sort by Column D A->Z
+
+https://support.google.com/fusiontables/answer/2476954?hl=en&topic=2569513&ctx=topic
+
+https://www.google.com/fusiontables/data?docid=1BDnT5U1Spyaes0Nj3DXciJKa_tuu7CzNRXWdVA#map:id=3
+
+[Fusion Tables](https://support.google.com/fusiontables/answer/2571232?hl=en)
+
+Change feature styles > Map marker icons > Column > Use icon specified in a column > Select > Icon
+
+Filter > Catagory 
+choose either `cars` or `pedal cycles`
