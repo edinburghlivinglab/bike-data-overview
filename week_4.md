@@ -15,5 +15,6 @@
 * City of Edinburgh Council [Open Data Store](http://www.edinburghopendata.info/dataset)
 * City of Edinburgh Council  [GitHub repository](https://github.com/edinburghcouncil/datasets)
 * [Scottish Neighbourhood Statistics](http://www.sns.gov.uk/default.aspx)
+* [Guide to Open Data](http://ewan-klein.github.io/ilwhack/)
 
 
