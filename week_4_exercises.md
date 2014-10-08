@@ -118,7 +118,7 @@ It should look something like this:[^1]
 ![](images/15mins_geocoded_interim.tiff =500x)
 
 [^1]: Note that I fixed the misspelling of 'Inverlieth'
-
+	
 
 You can now go ahead and delete the column with locations that you pasted in, leaving just the new geo-coordinates. Give labels to these two new columns: `Latitude` and `Longitude`, like this:
 
@@ -136,8 +136,17 @@ In this section of the exercise, you are going to take a few more steps that wil
 
 We want to change the spreadsheet so that we have a single column for the number of vehicles, and each row has an extra field for the category of vehicle. Here's what a portion of this would look like:
 
-![](images/categorised2.tiff =500x) 
+![](images/categorised2.tiff =500x)
 
+It is fairly easy to derive this new organisation of the data by copying and pasting in the spreadsheet, so it's up to you exactly how to carry it out. Make sure you save the result with an easy-to-remember name. I'd also recommend that you save it in CSV format.
+
+### Using Google Fusion Tables
+
+There are several services we could use to map the data set as we now have it. For this exercise, we're going to use  Google [Fusion Tables](https://support.google.com/fusiontables/answer/2571232?hl=en). You will probably have to be logged into a Google account to get access to this service. If the link works for you, you should get to a splash screen that looks like this on Chrome:
+
+![Fusion splash screen](images/fusion_splash.tiff =500x)
+
+Select the **Create a Fusion Table** button, and in the resulting dialogue box, choose the file that you ended up with in the preceding section. If you saved it in CSV format, all the default settings should work OK.
 
 Select column D 1:38
 
@@ -145,11 +154,14 @@ Data > Sort range from D1 to D38
 
 sort by Column D A->Z
 
-https://support.google.com/fusiontables/answer/2476954?hl=en&topic=2569513&ctx=topic
 
-https://www.google.com/fusiontables/data?docid=1BDnT5U1Spyaes0Nj3DXciJKa_tuu7CzNRXWdVA#map:id=3
+[Guide to changing the icon marker](https://support.google.com/fusiontables/answer/2679986?hl=en)
 
-[Fusion Tables](https://support.google.com/fusiontables/answer/2571232?hl=en)
+[Guide to Google icon markers](https://www.google.com/fusiontables/data?docid=1BDnT5U1Spyaes0Nj3DXciJKa_tuu7CzNRXWdVA#map:id=3)
+
+[Alternative Google approach to adding icon markers to an existing sheet](https://support.google.com/fusiontables/answer/2476954?hl=en&topic=2569513&ctx=topic)
+
+
 
 Change feature styles > Map marker icons > Column > Use icon specified in a column > Select > Icon
 
