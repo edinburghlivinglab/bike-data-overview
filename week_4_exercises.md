@@ -148,22 +148,49 @@ There are several services we could use to map the data set as we now have it. F
 
 Select the **Create a Fusion Table** button, and in the resulting dialogue box, choose the file that you ended up with in the preceding section. If you saved it in CSV format, all the default settings should work OK.
 
+After loading the file, and choosing the **Map of Latitude** tab, you should get a result that looks like this:
+
+![Map 1](images/fusion_map1.tiff =500x)
+
+There are a couple of points that immediately strike the eye:
+
+1. there seem to be fewer points that one would expect;
+1. one point in particular seems to be seriously misplaced;
+1. there's no visual distinction between counts of bikes vs. cars.
+
+I'm going to ignore (2); if you can figure out the problem with this, let me know! Let's see if we can do something about issue (3).
+
+If you look at the Google [tip on changing the icon marker](https://support.google.com/fusiontables/answer/2679986?hl=en), you'll see some clues on how to differentiate the marker according to the category of vehicle. Rather than adopting the procedure of merging two sheets suggested in the tip, let's just add markers by hand. Here's one examplel of what this might look like:
+
+![icon column](images/icons.tiff =500x)
+
+I've added a new column (F in this example) and labeled it **Icon**; and I've added the name of markers drawn from this [guide to Google icon markers](https://www.google.com/fusiontables/data?docid=1BDnT5U1Spyaes0Nj3DXciJKa_tuu7CzNRXWdVA#map:id=3) -- 'cycling' and 'cabs' are both names for markers. Note also that I've sorted the 'bike' rows on column D, and similarly for the 'car' rows, using an approach like this:
+
+```
 Select column D 1:38
 
 Data > Sort range from D1 to D38
 
 sort by Column D A->Z
+```
+
+Reload your data into a Fusion Table, and look at the map. Initially, it will look the same. However, if you go to the **Configure map** settings, and choose **Change feature styles**, you can change the default icon marker by selecting the **Column** option with settings like this:
+
+![icon column](images/map_features.tiff =500x)
+
+Here's what the result might look like:
+
+![Map 2](images/fusion_map2.tiff =500x)
+
+This is still not ideal, since the two sets of icons are overlayed. We can mitigate this problem by going to the **Filter** option and filtering on **Category** to only view one category of vehicle at a time. 
+
+Here are some more things to do:
+
+* Use the guidance in [tip on changing the icon marker](https://support.google.com/fusiontables/answer/2679986?hl=en) to show different markers for, say, cars, depending on the counts; e.g. a small marker for less than 50 and a big marker for more.
+* Is there a better way of visualising the data that takes into account that bike and car counts share the same geolocation?
+* Figure out a way of not showing a marker for zero count data rows.
 
 
-[Guide to changing the icon marker](https://support.google.com/fusiontables/answer/2679986?hl=en)
-
-[Guide to Google icon markers](https://www.google.com/fusiontables/data?docid=1BDnT5U1Spyaes0Nj3DXciJKa_tuu7CzNRXWdVA#map:id=3)
 
 [Alternative Google approach to adding icon markers to an existing sheet](https://support.google.com/fusiontables/answer/2476954?hl=en&topic=2569513&ctx=topic)
 
-
-
-Change feature styles > Map marker icons > Column > Use icon specified in a column > Select > Icon
-
-Filter > Catagory 
-choose either `cars` or `pedal cycles`
